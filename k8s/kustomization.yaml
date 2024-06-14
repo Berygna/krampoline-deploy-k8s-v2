@@ -4,3 +4,4 @@ resources:
   - frontend-deployment.yml
   - mongo-deployment.yml
   - mongo-pvc.yml
+  - ingress.yml
