@@ -1,18 +1,27 @@
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
+apiVersion: networking.k8s.io/v1 # Ingress API의 최신 버전을 사용
+kind: Ingress # 리소스 유형을 Ingress로 지정
 metadata:
+  name: frontend # Ingress 리소스의 이름
+  namespace: default # Ingress 리소스가 속할 네임스페이스
   annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true" # HTTPS를 강제로 사용하도록 설정. 보안을 강화하기 위해 SSL 리다이렉션 활성화
   labels:
-    app.kubernetes.io/managed-by: kargocd
-  name: frontend
-  namespace: default
+    app.kubernetes.io/managed-by: kargocd # 리소스를 관리하는 도구를 나타내는 레이블 (여기서는 Argo CD)
 spec:
   rules:
     - http:
         paths:
-          - path: /
-            pathType: Prefix
+          - path: / # 루트 경로에 대한 요청을 처리
+            pathType: Prefix # 경로 유형을 Prefix로 지정, 지정된 경로와 일치하는 모든 요청을 처리
             backend:
-              serviceName: frontend
-              servicePort: 3000
+              service:
+                name: web # 트래픽을 전송할 서비스의 이름
+                port:
+                  number: 3000 # 해당 서비스의 포트 번호
+          - path: /api # '/api' 경로에 대한 요청을 처리
+            pathType: Prefix # 경로 유형을 Prefix로 지정, 지정된 경로와 일치하는 모든 요청을 처리
+            backend:
+              service:
+                name: api # 트래픽을 전송할 서비스의 이름
+                port:
+                  number: 3001 # 해당 서비스의 포트 번호
