@@ -1,0 +1,6 @@
+namespace: krampoline
+resources:
+  - backend-deployment.yml
+  - frontend-deployment.yml
+  - mongo-deployment.yml
+  - mongo-pvc.yml
