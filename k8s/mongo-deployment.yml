@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: mongo
-          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_2627413daff8
+          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_a2423104f0a5
           ports:
             - containerPort: 27017
           env:

@@ -1,11 +1,17 @@
 dkosv3-krmp-edu-031
 
 
-frontend image : krmp-d2hub-idock.9rum.cc/dev-test/repo_5bee1ddaf556:latest
-                        krmp-d2hub-idock.9rum.cc/dev-test/repo_5bee1ddaf556
+frontend image : krmp-d2hub-idock.9rum.cc/dev-test/repo_5bee1ddaf556
+
+			krmp-d2hub-idock.9rum.cc/dev-test/repo_c8728ef9f919
 
 backend image : krmp-d2hub-idock.9rum.cc/dev-test/repo_e31efcc97fb8
-                        krmp-d2hub-idock.9rum.cc/dev-test/repo_e31efcc97fb8
+
+			krmp-d2hub-idock.9rum.cc/dev-test/repo_23abb0933674
+
 
 database image: krmp-d2hub-idock.9rum.cc/dev-test/repo_2627413daff8
-                       krmp-d2hub-idock.9rum.cc/dev-test/repo_2627413daff8
+
+			krmp-d2hub-idock.9rum.cc/dev-test/repo_a2423104f0a5
+
+			

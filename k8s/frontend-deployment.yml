@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_5bee1ddaf556
+          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_c8728ef9f919
           ports:
             - containerPort: 3000
 ---
